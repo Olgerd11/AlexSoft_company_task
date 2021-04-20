@@ -1,3 +1,21 @@
+@font-face {
+	font-family: 'georgia';
+	src: url('../fonts/georgia. eot');
+	src: local('☺'), url('../fonts/georgia.woff') format('woff'), url('../fonts/georgia.ttf') format('truetype'),
+		url('../fonts/georgia.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'georgia italic';
+	src: url('../fonts/georgiai.eot');
+	src: local('☺'), url('../fonts/georgiai.woff') format('woff'), url('../fonts/georgiai.ttf') format('truetype'),
+		url('../fonts/georgiai.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 $white: #ffffff;
 $green: #a7c353;
 $grey: #666666;
@@ -5,3 +23,10 @@ $lightGrey: #999999;
 $veryLightGrey: #d4d4d4;
 $footerDarkGrey: #313131;
 $footerLightGrey: #383838;
+
+p {
+	font-family: 'verdana';
+	font-size: 36px;
+	color: $green;
+	font-style: italic;
+}
