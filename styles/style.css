@@ -15,14 +15,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'verdana';
-  src: url("../temporary/verdana.eot");
-  src: local("☺"), url("../temporary/verdana.woff") format("woff"), url("../temporary/verdana.ttf") format("truetype"), url("../temporary/verdana.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
 p {
   font-family: 'verdana';
   font-size: 36px;
