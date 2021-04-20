@@ -1,26 +1,17 @@
 @charset "UTF-8";
-
 @font-face {
-	font-family: 'georgia';
-	src: url("../fonts/georgia. eot");
-	src: local("☺"), url("../fonts/georgia.woff") format("woff"), url("../fonts/georgia.ttf") format("truetype"),
-		url("../fonts/georgia.svg") format("svg");
-	font-weight: normal;
-	font-style: normal;
+  font-family: 'georgia';
+  src: url("../fonts/georgia. eot");
+  src: local("☺"), url("../fonts/georgia.woff") format("woff"), url("../fonts/georgia.ttf") format("truetype"), url("../fonts/georgia.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: 'georgia italic';
-	src: url("../fonts/georgiai.eot");
-	src: local("☺"), url("../fonts/georgiai.woff") format("woff"), url("../fonts/georgiai.ttf") format("truetype"),
-		url("../fonts/georgiai.svg") format("svg");
-	font-weight: normal;
-	font-style: normal;
-}
-
-p {
-	font-family: 'verdana';
-	font-size: 24px;
-	color: #a7c353;
+  font-family: 'georgia italic';
+  src: url("../fonts/georgiai.eot");
+  src: local("☺"), url("../fonts/georgiai.woff") format("woff"), url("../fonts/georgiai.ttf") format("truetype"), url("../fonts/georgiai.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
 }
 /*# sourceMappingURL=style.css.map */
