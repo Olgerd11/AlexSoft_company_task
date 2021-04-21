@@ -48,9 +48,10 @@ a {
 	color: #999999;
 }
 
-/* =============header styles============ */
+/* ============= header styles begin ============ */
 
-.header {
+.header,
+.main {
 	max-width: 1200px;
 	padding: 0 20px;
 	background-color: $footerDarkGrey;
@@ -104,9 +105,23 @@ a {
 	display: flex;
 	align-items: center;
 	padding: 0 20px;
+	position: relative;
+	&:hover {
+		transform: translate(0, 3px);
+		font-size: 1.5rem;
+		color: $grey;
+		transition-duration: 0.2s;
+	}
 }
 
 .navigation__link--active {
 	color: $white;
 	background-color: $green;
+	&:hover {
+		transform: none;
+		font-size: 1.3rem;
+		color: $white;
+	}
 }
+
+/* ============ main section begins =============*/
