@@ -37,6 +37,7 @@ a {
   color: #999999;
 }
 
+/* =============header styles============ */
 .header {
   max-width: 1200px;
   padding: 0 20px;
@@ -85,9 +86,6 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -95,5 +93,25 @@ a {
 
 .navigation .navigation__list:first-child {
   padding-left: 20px;
+}
+
+.navigation .navigation__list .navigation__list-item {
+  height: inherit;
+}
+
+.navigation__link {
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 20px;
+}
+
+.navigation__link--active {
+  color: #ffffff;
+  background-color: #a7c353;
 }
 /*# sourceMappingURL=style.css.map */

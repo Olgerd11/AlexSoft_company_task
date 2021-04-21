@@ -48,8 +48,7 @@ a {
 	color: #999999;
 }
 
-// header styles
-// ========================================
+/* =============header styles============ */
 
 .header {
 	max-width: 1200px;
@@ -90,10 +89,24 @@ a {
 		width: 100%;
 		height: 100%;
 		display: flex;
-		align-items: center;
 		justify-content: space-between;
 		&:first-child {
 			padding-left: 20px;
 		}
+		.navigation__list-item {
+			height: inherit;
+		}
 	}
+}
+
+.navigation__link {
+	height: inherit;
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.navigation__link--active {
+	color: $white;
+	background-color: $green;
 }
