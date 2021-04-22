@@ -1,5 +1,7 @@
 'use strict';
 
+/* ============= header navigation ============== */
+
 const logo1 = document.querySelector('#changeStyle1');
 const logo2 = document.querySelector('#changeStyle2');
 const logo3 = document.querySelector('#changeStyle3');
@@ -34,3 +36,14 @@ logo3.addEventListener('click', changeNavStyles);
 logo4.addEventListener('click', changeNavStyles);
 logo5.addEventListener('click', changeNavStyles);
 logo6.addEventListener('click', changeNavStyles);
+
+/* ============= slick config for slider =============== */
+
+// .slider__kaleidoscope
+
+$('.slider__kaleidoscope').slick({
+	adaptiveHeight: true,
+	arrows: true,
+	cssEase: 'ease',
+	dots: true
+});
