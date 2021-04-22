@@ -162,3 +162,23 @@ a {
 		border-radius: 30px;
 	}
 }
+
+.slick-prev {
+	position: absolute;
+	left: 3%;
+}
+
+.slick-next {
+	position: absolute;
+	right: 7%;
+}
+
+#slick-slide-control01,
+#slick-slide-control02,
+#slick-slide-control03,
+#slick-slide-control04,
+#slick-slide-control05 {
+	&::before {
+		color: $green;
+	}
+}

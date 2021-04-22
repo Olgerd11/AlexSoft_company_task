@@ -143,6 +143,7 @@ a {
 .slider {
   max-width: 1120px;
   border-top: #a7c353 solid 1px;
+  padding-bottom: 40px;
 }
 
 .slider__header {
@@ -171,5 +172,23 @@ a {
   border-right: #a7c353 solid 2px;
   font-size: 50px;
   border-radius: 30px;
+}
+
+.slick-prev {
+  position: absolute;
+  left: 3%;
+}
+
+.slick-next {
+  position: absolute;
+  right: 7%;
+}
+
+#slick-slide-control01::before,
+#slick-slide-control02::before,
+#slick-slide-control03::before,
+#slick-slide-control04::before,
+#slick-slide-control05::before {
+  color: #a7c353;
 }
 /*# sourceMappingURL=style.css.map */
