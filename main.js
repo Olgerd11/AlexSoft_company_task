@@ -36,14 +36,3 @@ logo3.addEventListener('click', changeNavStyles);
 logo4.addEventListener('click', changeNavStyles);
 logo5.addEventListener('click', changeNavStyles);
 logo6.addEventListener('click', changeNavStyles);
-
-/* ============= slick config for slider =============== */
-
-// .slider__kaleidoscope
-
-$('.slider__kaleidoscope').slick({
-	adaptiveHeight: true,
-	arrows: true,
-	cssEase: 'ease',
-	dots: true
-});
