@@ -29,6 +29,7 @@ html {
 
 body {
   font-size: 1.3rem;
+  line-height: 120%;
   font-family: georgia;
   color: #999999;
 }
@@ -143,8 +144,10 @@ a {
 
 /* ======= main > slider ====== */
 .slider {
+  position: relative;
   max-width: 1120px;
   border-top: #a7c353 solid 1px;
+  padding-bottom: 40px;
 }
 
 .slider__header {
@@ -212,4 +215,151 @@ a {
 }
 
 /* ================== main > slider > text ================= */
+.slider__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: absolute;
+  right: 16%;
+  bottom: 85px;
+}
+
+.slider__container .slider__text {
+  width: 350px;
+  background-color: #ffffff;
+  padding: 15px 15px 10px 15px;
+}
+
+.slider__container .slider__text--different {
+  padding: 10px 20px;
+  background-color: #a7c353;
+  color: #ffffff;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.service {
+  border: teal solid 2px;
+  padding: 40px 0;
+  border-top: #e2e2e2 solid 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.service .service__blocks {
+  max-width: 345px;
+  margin-right: 20px;
+}
+
+.service .service__blocks .service__headers {
+  font-size: 2.2rem;
+  color: #666666;
+  padding-bottom: 30px;
+}
+
+.service .service__blocks .read-more {
+  color: #a7c353;
+  text-align: right;
+  display: block;
+}
+
+.service .service__blocks .read-more:hover {
+  font-size: 1.4rem;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.service .service__blocks:last-of-type {
+  margin-right: 0;
+}
+
+.our-service .fa-bed,
+.our-service .fa-first-aid,
+.our-service .fa-hiking,
+.our-service .fa-shuttle-van {
+  font-size: 64px;
+  color: #a5c134;
+  margin: 0 20px 10px 0;
+  min-width: 64px;
+}
+
+/* ============ main > service > about us =========== */
+.about-us * {
+  padding-bottom: 25px;
+}
+
+.about-us__img {
+  margin-left: calc(50% - 135px);
+  margin-bottom: 25px;
+  padding: 4px;
+  border: #e2e2e2 solid 1px;
+}
+
+.our-service__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: 20px;
+}
+
+.our-service__item .our-service__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.our-service__item .our-service__container .our-service__header {
+  font-size: 1.4rem;
+  font-family: 'georgia bold';
+}
+
+.our-service__item:last-of-type {
+  padding-bottom: 0;
+}
+
+.feedback .feedback__article-header {
+  font-size: 1.6rem;
+  font-family: 'georgia bold';
+  padding: 20px 0 20px 65px;
+  position: relative;
+}
+
+.feedback .feedback__article-header::before {
+  content: "“";
+  font-size: 12rem;
+  position: absolute;
+  top: 46px;
+  color: #d4d4d4;
+  left: 0;
+}
+
+.feedback .feedback__article-header .feedback__occupation {
+  font-family: georgia;
+}
+
+.feedback .feedback__read-more {
+  padding-top: 10px;
+}
 /*# sourceMappingURL=style.css.map */

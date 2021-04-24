@@ -25,6 +25,9 @@
 	font-style: normal;
 }
 
+$red: red solid 1px;
+$blue: teal solid 2px;
+
 $white: #ffffff;
 $green: #a7c353;
 $grey: #666666;
@@ -40,6 +43,7 @@ html {
 
 body {
 	font-size: 1.3rem;
+	line-height: 120%;
 	font-family: georgia;
 	color: $lightGrey;
 }
@@ -137,8 +141,10 @@ a {
 /* ======= main > slider ====== */
 
 .slider {
+	position: relative;
 	max-width: 1120px;
 	border-top: $green solid 1px;
+	padding-bottom: 40px;
 	&__header {
 		font-size: 2.2rem;
 		font-family: 'georgia italic';
@@ -182,7 +188,7 @@ a {
 /* ============== main > slider > dots ============== */
 
 .slick-dots li.slick-active {
-	& button::before {
+	button::before {
 		color: $white;
 	}
 }
@@ -192,7 +198,7 @@ a {
 	border-radius: 50%;
 	width: 16px;
 	height: 16px;
-	& button {
+	button {
 		width: 16px;
 		height: 16px;
 		&::before {
@@ -205,3 +211,122 @@ a {
 }
 
 /* ================== main > slider > text ================= */
+
+.slider__container {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: flex-end;
+	position: absolute;
+	right: 16%;
+	bottom: 85px;
+	.slider__text {
+		width: 350px;
+		background-color: $white;
+		padding: 15px 15px 10px 15px;
+	}
+	.slider__text--different {
+		padding: 10px 20px;
+		background-color: $green;
+		color: $white;
+		font-size: 22px;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+}
+
+.service {
+	border: $blue;
+	padding: 40px 0;
+	border-top: #e2e2e2 solid 1px;
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	.service__blocks {
+		max-width: 345px;
+		margin-right: 20px;
+		.service__headers {
+			font-size: 2.2rem;
+			color: $grey;
+			padding-bottom: 30px;
+		}
+		.read-more {
+			color: $green;
+			text-align: right;
+			display: block;
+			&:hover {
+				font-size: 1.4rem;
+				transition-duration: 0.3s;
+			}
+		}
+	}
+	.service__blocks:last-of-type {
+		margin-right: 0;
+	}
+}
+
+.our-service {
+	.fa-bed,
+	.fa-first-aid,
+	.fa-hiking,
+	.fa-shuttle-van {
+		font-size: 64px;
+		color: #a5c134;
+		margin: 0 20px 10px 0;
+		min-width: 64px;
+	}
+}
+
+/* ============ main > service > about us =========== */
+
+.about-us {
+	* {
+		padding-bottom: 25px;
+	}
+	&__img {
+		margin-left: calc(50% - 135px);
+		margin-bottom: 25px;
+		padding: 4px;
+		border: #e2e2e2 solid 1px;
+	}
+}
+
+.our-service__item {
+	display: flex;
+	padding-bottom: 20px;
+	.our-service__container {
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: space-around;
+		.our-service__header {
+			font-size: 1.4rem;
+			font-family: 'georgia bold';
+		}
+	}
+}
+
+.our-service__item:last-of-type {
+	padding-bottom: 0;
+}
+
+.feedback {
+	.feedback__article-header {
+		font-size: 1.6rem;
+		font-family: 'georgia bold';
+		padding: 20px 0 20px 65px;
+		position: relative;
+		&::before {
+			content: "“";
+			font-size: 12rem;
+			position: absolute;
+			top: 46px;
+			color: $veryLightGrey;
+			left: 0;
+		}
+		.feedback__occupation {
+			font-family: georgia;
+		}
+	}
+	.feedback__read-more {
+		padding-top: 10px;
+	}
+}
