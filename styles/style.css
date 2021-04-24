@@ -37,7 +37,7 @@ a {
   color: #999999;
 }
 
-/* ============= header styles begin ============ */
+/* ============= header began ============ */
 .header,
 .main {
   max-width: 1200px;
@@ -133,13 +133,15 @@ a {
   color: #ffffff;
 }
 
-/* ============ main section begins =============*/
+/* ============= header ended ================= */
+/* ============ main began =============*/
 .main__container {
   max-width: 1160px;
   background-color: #ffffff;
   padding: 0 20px;
 }
 
+/* ======= main > slider ====== */
 .slider {
   max-width: 1120px;
   border-top: #a7c353 solid 1px;
@@ -159,6 +161,7 @@ a {
   margin: 0 auto;
 }
 
+/* ================ main > slider > arrows ================= */
 .slick-arrow {
   z-index: 1;
 }
@@ -183,11 +186,30 @@ a {
   right: 7%;
 }
 
-#slick-slide-control01::before,
-#slick-slide-control02::before,
-#slick-slide-control03::before,
-#slick-slide-control04::before,
-#slick-slide-control05::before {
-  color: #a7c353;
+/* ============== main > slider > dots ============== */
+.slick-dots li.slick-active button::before {
+  color: #ffffff;
 }
+
+.slick-dots li {
+  background-color: #a7c353;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+}
+
+.slick-dots li button {
+  width: 16px;
+  height: 16px;
+}
+
+.slick-dots li button::before {
+  color: inherit;
+  font-size: 12px;
+  width: 100%;
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+
+/* ================== main > slider > text ================= */
 /*# sourceMappingURL=style.css.map */

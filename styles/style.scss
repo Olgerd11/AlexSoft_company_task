@@ -48,7 +48,7 @@ a {
 	color: #999999;
 }
 
-/* ============= header styles begin ============ */
+/* ============= header began ============ */
 
 .header,
 .main {
@@ -124,13 +124,17 @@ a {
 	}
 }
 
-/* ============ main section begins =============*/
+/* ============= header ended ================= */
+
+/* ============ main began =============*/
 
 .main__container {
 	max-width: 1160px;
 	background-color: $white;
 	padding: 0 20px;
 }
+
+/* ======= main > slider ====== */
 
 .slider {
 	max-width: 1120px;
@@ -149,6 +153,8 @@ a {
 	max-width: 920px;
 	margin: 0 auto;
 }
+
+/* ================ main > slider > arrows ================= */
 
 .slick-arrow {
 	z-index: 1;
@@ -173,12 +179,29 @@ a {
 	right: 7%;
 }
 
-#slick-slide-control01,
-#slick-slide-control02,
-#slick-slide-control03,
-#slick-slide-control04,
-#slick-slide-control05 {
-	&::before {
-		color: $green;
+/* ============== main > slider > dots ============== */
+
+.slick-dots li.slick-active {
+	& button::before {
+		color: $white;
 	}
 }
+
+.slick-dots li {
+	background-color: $green;
+	border-radius: 50%;
+	width: 16px;
+	height: 16px;
+	& button {
+		width: 16px;
+		height: 16px;
+		&::before {
+			color: inherit;
+			font-size: 12px;
+			width: 100%;
+			transform: translateY(-1px);
+		}
+	}
+}
+
+/* ================== main > slider > text ================= */

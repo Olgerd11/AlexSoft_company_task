@@ -13,9 +13,7 @@ const logo = [logo1, logo2, logo3, logo4, logo5, logo6];
 
 const removeNavStyle = function() {
 	for (let i of logo) {
-		if (i.classList.contains) {
-			i.classList.remove('navigation__link--active');
-		}
+		i.classList.remove('navigation__link--active');
 	}
 };
 
