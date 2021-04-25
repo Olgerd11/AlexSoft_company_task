@@ -283,7 +283,7 @@ a {
 }
 
 .service .service__blocks .read-more:hover {
-  font-size: 1.4rem;
+  font-size: 110%;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
@@ -489,7 +489,7 @@ a {
 }
 
 .blog__container .blog__link:hover {
-  font-size: 1.3rem;
+  font-size: 110%;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
 }
@@ -737,6 +737,10 @@ a {
   .header {
     padding-left: 0;
     padding-right: 0;
+  }
+  .copyright {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */
