@@ -34,3 +34,11 @@ logo3.addEventListener('click', changeNavStyles);
 logo4.addEventListener('click', changeNavStyles);
 logo5.addEventListener('click', changeNavStyles);
 logo6.addEventListener('click', changeNavStyles);
+
+/* ================= burger menu ========== */
+
+const navigation = document.querySelector('.navigation');
+const burgerButton = document.querySelector('.header__menu-button');
+burgerButton.addEventListener('click', () => {
+	navigation.classList.toggle('navigation--active');
+});

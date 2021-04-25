@@ -70,6 +70,10 @@ a {
 	display: flex;
 }
 
+.header__menu-button {
+	display: none;
+}
+
 .logo {
 	width: 30%;
 	padding: 30px 0;
@@ -476,4 +480,75 @@ a {
 	border-top: #3a3a3a solid 1px;
 	display: flex;
 	justify-content: space-between;
+}
+
+/* ================== ended footer =============== */
+
+/* ================ media quaries ============= */
+
+/*  ==================== header ================== */
+
+@media (max-width: 920px) {
+	.navigation {
+		display: none;
+	}
+
+	.header__menu-button {
+		display: block;
+		height: 40px;
+		width: 48px;
+		border-top: $green solid 5px;
+		border-bottom: $green solid 5px;
+		background-color: transparent;
+		position: relative;
+		margin: 25px 20px 0 0;
+		&::before {
+			content: '';
+			width: 48px;
+			height: 5px;
+			background-color: $green;
+			position: absolute;
+			left: 0px;
+			top: 13px;
+		}
+	}
+
+	.header__container {
+		justify-content: space-between;
+	}
+
+	.navigation--active {
+		display: block;
+		position: absolute;
+		top: 102px;
+		width: 100%;
+		left: 0;
+		.navigation__list {
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			position: relative;
+			z-index: 1;
+			padding: 0;
+			background-color: $green;
+			&-item {
+				padding: 10px 0;
+			}
+		}
+	}
+
+	.navigation__link {
+		color: $white;
+		padding-bottom: 10px;
+		padding-top: 10px;
+		&:hover {
+			border-bottom: $white solid 1px;
+			border-top: $white solid 1px;
+		}
+	}
+
+	.navigation__link--active {
+		border-bottom: $white solid 1px;
+		border-top: $white solid 1px;
+	}
 }
