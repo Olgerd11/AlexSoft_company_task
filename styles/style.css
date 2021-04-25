@@ -603,4 +603,24 @@ a {
     border-top: #ffffff solid 1px;
   }
 }
+
+/* ================== h1 ================= */
+@media (max-width: 650px) {
+  .slider__header {
+    padding: 30px 10px;
+  }
+}
+
+/* ===================== slider ================ */
+@media (max-width: 780px) {
+  .slick-arrow::before {
+    display: none;
+  }
+  .slider__img {
+    -o-object-position: -200px 0;
+       object-position: -200px 0;
+  }
+}
+
+/* ================ service ================== */
 /*# sourceMappingURL=style.css.map */
