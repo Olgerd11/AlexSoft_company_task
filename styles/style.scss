@@ -352,6 +352,7 @@ a {
 .info {
 	display: flex;
 	justify-content: space-between;
+	padding-bottom: 30px;
 	&__blocks {
 		max-width: 275px;
 	}
@@ -395,6 +396,11 @@ a {
 		top: -5px;
 		padding-left: 10px;
 		color: $green;
+		&:hover {
+			color: $white;
+			text-shadow: 0.25px 0.25px 0 #b2b2b2;
+			transition-duration: 0.2s;
+		}
 	}
 }
 
@@ -458,6 +464,16 @@ a {
 			font-size: 1.4rem;
 			padding: 12px 30px;
 			transition-duration: 0.4s;
+			overflow: hidden;
 		}
 	}
+}
+
+/*  ============= footer copyright ============ */
+
+.copyright {
+	padding-top: 20px;
+	border-top: #3a3a3a solid 1px;
+	display: flex;
+	justify-content: space-between;
 }

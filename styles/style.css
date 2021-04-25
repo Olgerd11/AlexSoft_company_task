@@ -387,6 +387,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding-bottom: 30px;
 }
 
 .info__blocks {
@@ -434,6 +435,13 @@ a {
   top: -5px;
   padding-left: 10px;
   color: #a7c353;
+}
+
+.social__mcr-container .social__link:hover {
+  color: #ffffff;
+  text-shadow: 0.25px 0.25px 0 #b2b2b2;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 /* ============== footer > blog ============ */
@@ -505,5 +513,18 @@ a {
   padding: 12px 30px;
   -webkit-transition-duration: 0.4s;
           transition-duration: 0.4s;
+  overflow: hidden;
+}
+
+/*  ============= footer copyright ============ */
+.copyright {
+  padding-top: 20px;
+  border-top: #3a3a3a solid 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=style.css.map */
