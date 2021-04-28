@@ -533,6 +533,7 @@ a {
 		background-color: transparent;
 		position: relative;
 		margin: 25px 20px 0 0;
+		transition-duration: 0.2s;
 		&::before {
 			content: '';
 			width: 48px;
@@ -541,6 +542,43 @@ a {
 			position: absolute;
 			left: 0px;
 			top: 13px;
+			transition-duration: 0.5s;
+		}
+		&::after {
+			content: '';
+			width: 48px;
+			height: 5px;
+			background-color: $green;
+			position: absolute;
+			left: 0px;
+			top: 13px;
+			transition-duration: 0.3s;
+		}
+	}
+
+	.header__menu-button--active {
+		border: none;
+		&::before {
+			content: '';
+			width: 48px;
+			height: 5px;
+			background-color: $green;
+			position: absolute;
+			left: 0px;
+			top: 13px;
+			transform: rotate(-45deg);
+			transition-duration: 1s;
+		}
+		&::after {
+			content: '';
+			width: 48px;
+			height: 5px;
+			background-color: $green;
+			position: absolute;
+			left: 0px;
+			top: 13px;
+			transform: rotate(45deg);
+			transition-duration: 0.5s;
 		}
 	}
 
@@ -548,12 +586,14 @@ a {
 		justify-content: space-between;
 	}
 
-	.navigation--active {
+	.navigation--active-high {
 		display: block;
 		position: absolute;
-		top: 102px;
+		top: -350px;
 		width: 100%;
 		left: 0;
+		transition-duration: 0.5s;
+		transition-delay: 0.5s;
 		.navigation__list {
 			display: flex;
 			flex-flow: column nowrap;
@@ -562,10 +602,19 @@ a {
 			z-index: 1;
 			padding: 0;
 			background-color: $green;
+			&:first-child {
+				padding-left: 0;
+			}
 			&-item {
 				padding: 10px 0;
 			}
 		}
+	}
+
+	.navigation--active-low {
+		top: 102px;
+		transition-duration: 0.5s;
+		transition-delay: 0.5s;
 	}
 
 	.navigation__link {

@@ -39,6 +39,8 @@ logo6.addEventListener('click', changeNavStyles);
 
 const navigation = document.querySelector('.navigation');
 const burgerButton = document.querySelector('.header__menu-button');
+const burgerCross = document.querySelector('.header__menu-button');
 burgerButton.addEventListener('click', () => {
-	navigation.classList.toggle('navigation--active');
+	navigation.classList.toggle('navigation--active-low');
+	burgerCross.classList.toggle('header__menu-button--active');
 });

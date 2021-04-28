@@ -587,6 +587,8 @@ a {
     background-color: transparent;
     position: relative;
     margin: 25px 20px 0 0;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
   }
   .header__menu-button::before {
     content: '';
@@ -596,20 +598,66 @@ a {
     position: absolute;
     left: 0px;
     top: 13px;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+  }
+  .header__menu-button::after {
+    content: '';
+    width: 48px;
+    height: 5px;
+    background-color: #a7c353;
+    position: absolute;
+    left: 0px;
+    top: 13px;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s;
+  }
+  .header__menu-button--active {
+    border: none;
+  }
+  .header__menu-button--active::before {
+    content: '';
+    width: 48px;
+    height: 5px;
+    background-color: #a7c353;
+    position: absolute;
+    left: 0px;
+    top: 13px;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+  }
+  .header__menu-button--active::after {
+    content: '';
+    width: 48px;
+    height: 5px;
+    background-color: #a7c353;
+    position: absolute;
+    left: 0px;
+    top: 13px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
   }
   .header__container {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .navigation--active {
+  .navigation--active-high {
     display: block;
     position: absolute;
-    top: 102px;
+    top: -350px;
     width: 100%;
     left: 0;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    -webkit-transition-delay: 0.5s;
+            transition-delay: 0.5s;
   }
-  .navigation--active .navigation__list {
+  .navigation--active-high .navigation__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -625,8 +673,18 @@ a {
     padding: 0;
     background-color: #a7c353;
   }
-  .navigation--active .navigation__list-item {
+  .navigation--active-high .navigation__list:first-child {
+    padding-left: 0;
+  }
+  .navigation--active-high .navigation__list-item {
     padding: 10px 0;
+  }
+  .navigation--active-low {
+    top: 102px;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    -webkit-transition-delay: 0.5s;
+            transition-delay: 0.5s;
   }
   .navigation__link {
     color: #ffffff;
