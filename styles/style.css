@@ -25,6 +25,7 @@
 
 html {
   font-size: 10px;
+  background-color: #2d2d2d;
 }
 
 body {
@@ -43,7 +44,7 @@ a {
 .main {
   max-width: 1200px;
   padding: 0 20px;
-  background-color: #313131;
+  background-color: #2d2d2d;
   margin: 0 auto;
 }
 
@@ -166,6 +167,7 @@ a {
 .slider__kaleidoscope {
   max-width: 920px;
   margin: 0 auto;
+  position: relative;
 }
 
 /* ================ main > slider > arrows ================= */
@@ -173,24 +175,33 @@ a {
   z-index: 1;
 }
 
-.slick-arrow::before {
-  background-color: #a7c353;
-  color: #000000;
-  border-top: #a7c353 solid 7px;
-  border-left: #a7c353 solid 2px;
-  border-right: #a7c353 solid 2px;
-  font-size: 50px;
-  border-radius: 30px;
+.slick-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slick-next,
+.slick-prev {
+  background-color: #000000;
+  border: #a7c353 solid 2px;
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  position: absolute;
+  right: 1%;
+}
+
+.slick-next::before,
+.slick-prev::before {
+  content: url("../images/rightArrow.png");
 }
 
 .slick-prev {
   position: absolute;
-  left: 3%;
+  left: 1%;
 }
 
-.slick-next {
-  position: absolute;
-  right: 7%;
+.slick-prev::before {
+  content: url("../images/leftArrow.png");
 }
 
 /* ============== main > slider > dots ============== */
@@ -203,6 +214,7 @@ a {
   border-radius: 50%;
   width: 16px;
   height: 16px;
+  margin: 0 2.5px;
 }
 
 .slick-dots li button {
@@ -260,13 +272,13 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-flow: row nowrap;
           flex-flow: row nowrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .service .service__blocks {
-  max-width: 345px;
+  max-width: 280px;
   margin-right: 20px;
 }
 
@@ -324,7 +336,6 @@ a {
 }
 
 .about-us__img {
-  margin-left: calc(50% - 135px);
   margin-bottom: 25px;
   padding: 4px;
   border: #e2e2e2 solid 1px;
@@ -389,7 +400,7 @@ a {
 .footer {
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #313131;
+  background-color: #2d2d2d;
   padding: 40px 20px 20px 20px;
   font-size: 1.2rem;
   color: #999999;
@@ -406,9 +417,8 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   padding-bottom: 30px;
 }
 
@@ -439,22 +449,21 @@ a {
 
 /* ============== footer > social ============ */
 .social__mcr-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 15px 0 5px;
   border-bottom: #3a3a3a solid 1px;
 }
 
-.social__mcr-container .fa-linkedin,
-.social__mcr-container .fa-twitter-square,
-.social__mcr-container .fa-pinterest-square,
-.social__mcr-container .fa-rss-square {
-  font-size: 35px;
-  color: #383838;
-  background-color: #ffffff;
-}
-
 .social__mcr-container .social__link {
-  position: relative;
-  top: -5px;
   padding-left: 10px;
   color: #a7c353;
 }
@@ -464,6 +473,18 @@ a {
   text-shadow: 0.25px 0.25px 0 #b2b2b2;
   -webkit-transition-duration: 0.2s;
           transition-duration: 0.2s;
+}
+
+.social__mcr-container .social__img-container {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color: #353535;
+  border-radius: 50%;
+}
+
+.social__mcr-container .social__img-container .social__img {
+  margin: 8px 8px;
 }
 
 /* ============== footer > blog ============ */
@@ -522,7 +543,7 @@ a {
 }
 
 .contact__form .contact__button {
-  color: #313131;
+  color: #2d2d2d;
   background-color: #a7c353;
   padding: 10px 10px;
   font-family: 'georgia bold';
@@ -636,6 +657,21 @@ a {
   }
   .slick-arrow::before {
     display: none;
+  }
+  .slick-next,
+  .slick-prev {
+    border: none;
+    opacity: 0;
+  }
+  .slider__container {
+    font-size: 1rem;
+  }
+  .slider__container .slider__text {
+    padding: 5px 5px;
+    max-width: 270px;
+  }
+  .slider__container .slider__text--different {
+    font-size: 1.8rem;
   }
   .slider__img {
     -o-object-position: -200px 0;

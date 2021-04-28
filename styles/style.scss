@@ -33,12 +33,13 @@ $green: #a7c353;
 $grey: #666666;
 $lightGrey: #999999;
 $veryLightGrey: #d4d4d4;
-$footerDarkGrey: #313131;
+$footerDarkGrey: #2d2d2d;
 $footerLightGrey: #383838;
 $black: #000000;
 
 html {
 	font-size: 10px;
+	background-color: $footerDarkGrey;
 }
 
 body {
@@ -162,31 +163,38 @@ a {
 .slider__kaleidoscope {
 	max-width: 920px;
 	margin: 0 auto;
+	position: relative;
 }
 
 /* ================ main > slider > arrows ================= */
 
 .slick-arrow {
 	z-index: 1;
+	&:hover {
+		background-color: rgba($color: #000000, $alpha: 0.7);
+	}
+}
+
+.slick-next,
+.slick-prev {
+	background-color: $black;
+	border: $green solid 2px;
+	border-radius: 50%;
+	width: 52px;
+	height: 52px;
+	position: absolute;
+	right: 1%;
 	&::before {
-		background-color: $green;
-		color: $black;
-		border-top: $green solid 7px;
-		border-left: $green solid 2px;
-		border-right: $green solid 2px;
-		font-size: 50px;
-		border-radius: 30px;
+		content: url('../images/rightArrow.png');
 	}
 }
 
 .slick-prev {
 	position: absolute;
-	left: 3%;
-}
-
-.slick-next {
-	position: absolute;
-	right: 7%;
+	left: 1%;
+	&::before {
+		content: url('../images/leftArrow.png');
+	}
 }
 
 /* ============== main > slider > dots ============== */
@@ -202,6 +210,7 @@ a {
 	border-radius: 50%;
 	width: 16px;
 	height: 16px;
+	margin: 0 2.5px;
 	button {
 		width: 16px;
 		height: 16px;
@@ -243,9 +252,9 @@ a {
 	border-top: #e2e2e2 solid 1px;
 	display: flex;
 	flex-flow: row nowrap;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	.service__blocks {
-		max-width: 345px;
+		max-width: 280px;
 		margin-right: 20px;
 		.service__headers {
 			font-size: 2.2rem;
@@ -302,7 +311,6 @@ a {
 		padding-bottom: 25px;
 	}
 	&__img {
-		margin-left: calc(50% - 135px);
 		margin-bottom: 25px;
 		padding: 4px;
 		border: #e2e2e2 solid 1px;
@@ -375,7 +383,7 @@ a {
 
 .info {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-around;
 	padding-bottom: 30px;
 	&__blocks {
 		max-width: 275px;
@@ -405,25 +413,28 @@ a {
 /* ============== footer > social ============ */
 
 .social__mcr-container {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
 	padding: 15px 0 5px;
 	border-bottom: #3a3a3a solid 1px;
-	.fa-linkedin,
-	.fa-twitter-square,
-	.fa-pinterest-square,
-	.fa-rss-square {
-		font-size: 35px;
-		color: #383838;
-		background-color: $white;
-	}
 	.social__link {
-		position: relative;
-		top: -5px;
 		padding-left: 10px;
 		color: $green;
 		&:hover {
 			color: $white;
 			text-shadow: 0.25px 0.25px 0 #b2b2b2;
 			transition-duration: 0.2s;
+		}
+	}
+	.social__img-container {
+		display: inline-block;
+		width: 32px;
+		height: 32px;
+		background-color: #353535;
+		border-radius: 50%;
+		.social__img {
+			margin: 8px 8px;
 		}
 	}
 }
@@ -589,6 +600,21 @@ a {
 	}
 	.slick-arrow::before {
 		display: none;
+	}
+	.slick-next,
+	.slick-prev {
+		border: none;
+		opacity: 0;
+	}
+	.slider__container {
+		font-size: 1rem;
+		.slider__text {
+			padding: 5px 5px;
+			max-width: 270px;
+		}
+		.slider__text--different {
+			font-size: 1.8rem;
+		}
 	}
 	.slider__img {
 		object-position: -200px 0;
